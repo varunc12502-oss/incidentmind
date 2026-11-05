@@ -1,0 +1,16 @@
+[
+  {
+    "service": "payment-gateway",
+    "environment": "production",
+    "error_code": "HTTP 504",
+    "message": "Gateway Timeout on /v2/charge endpoint",
+    "stack_trace": "redis.exceptions.ConnectionError: ConnectionPoolExhausted: Max 100 connections reached during peak throughput. Call pool size full."
+  },
+  {
+    "service": "auth-service",
+    "environment": "production",
+    "error_code": "HTTP 500",
+    "message": "JWT validation token failure under heavy load",
+    "stack_trace": "pyjwt.exceptions.DecodeError: Signature verification failed. Key rotation cache missed state sync in worker thread #4."
+  }
+]
